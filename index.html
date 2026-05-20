@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Sorry Moyna 💖 - Agar Tum Saath Ho</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #ff9a9e 0%, #fad0c4 50%, #ffdde1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', 'Poppins', 'Comic Neue', cursive, sans-serif;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 75px;
+            box-shadow: 0 30px 55px rgba(0, 0, 0, 0.25), 0 0 0 8px rgba(255, 220, 210, 0.7);
+            max-width: 950px;
+            width: 100%;
+            padding: 30px 20px 40px;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .gf-section {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+        }
+        .gf-frame {
+            background: linear-gradient(135deg, #ffb347, #ff6b6b, #ff3b6f);
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+            animation: borderGlow 2s infinite;
+        }
+        @keyframes borderGlow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(255, 107, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+        .gf-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            transition: 0.3s ease;
+        }
+        .gf-img:hover {
+            transform: scale(1.02) rotate(2deg);
+        }
+        .gf-name {
+            font-size: 1.7rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #c31432, #ff6b6b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-top: 12px;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            background: linear-gradient(135deg, #c31432, #ff6b6b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .sub {
+            font-size: 1.15rem;
+            color: #ff4d6d;
+            margin-bottom: 18px;
+            border-bottom: 2px dashed #ffb3ba;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .sorry-container {
+            background: #fff0f3;
+            border-radius: 55px;
+            padding: 22px 15px;
+            max-height: 390px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 8px #ffb7c5, 0 12px 24px rgba(0, 0, 0, 0.08);
+            margin: 18px 0;
+        }
+
+        .sorry-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .sorry-item {
+            background: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 0 #ff99aa;
+            transition: 0.12s linear;
+            color: #b91c3a;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+        }
+
+        .sorry-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 0 #ff4d6d;
+            background: #fff5f8;
+            color: #ff2e63;
+        }
+
+        .heart-float {
+            font-size: 2rem;
+            animation: floatHeart 1.8s infinite ease;
+            display: inline-block;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .footer-message {
+            margin-top: 22px;
+            background: linear-gradient(120deg, #ffe6ea, #ffdce3);
+            padding: 16px;
+            border-radius: 60px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #c9184a;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        button {
+            background: #ff758f;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 12px 32px;
+            border-radius: 50px;
+            margin-top: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        button:hover {
+            background: #ff3b6f;
+            transform: scale(0.96);
+        }
+
+        .music-status {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #ff6b6b;
+            background: #fff0f0;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe2e6;
+            border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff809a;
+            border-radius: 20px;
+        }
+        @media (max-width: 550px) {
+            .sorry-item { padding: 5px 12px; font-size: 0.8rem; }
+            h1 { font-size: 2rem; }
+            .gf-img { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+<div class="card" id="mainCard">
+    <div class="heart-float">💖💗💘</div>
+
+    <div class="gf-section">
+        <div class="gf-frame">
+            <img class="gf-img" src="https://i.postimg.cc/9XktGbrk/Messenger-creation-717880C3-FA0A-40C9-9B09-A116E15A9F7A.jpg" alt="My Moyna ❤️">
+        </div>
+    </div>
+    <div class="gf-name">✨ আমার Moyna ✨</div>
+
+    <h1>Sorry Moyna</h1>
+    <div class="sub">❤️ তোমার জন্য ৯৯৯ বার মন থেকে ❤️</div>
+
+    <div class="sorry-container" id="scrollArea">
+        <div class="sorry-grid" id="sorryList"></div>
+    </div>
+
+    <div class="footer-message">
+        🎵 "Agar Tum Saath Ho, Toh Dard Bhi Mitha Lage..." 🎵<br>
+        🥺 ভুল হয়েছে, জানি। এখনি ক্ষমা করে দাও প্লিজ — তোমার মানুষটা 🥺
+    </div>
+    <button onclick="window.location.reload();">🔁 রিফ্রেশ করে আবার ৯৯৯ বার দেখাও 😇</button>
+    <div class="music-status" id="musicStatus">🎵 গান বাজানোর জন্য যে কোনো জায়গায় ক্লিক করুন</div>
+</div>
+
+<script>
+    // 999 টা Sorry তৈরি
+    const grid = document.getElementById('sorryList');
+    for (let i = 1; i <= 999; i++) {
+        const box = document.createElement('div');
+        box.className = 'sorry-item';
+        box.textContent = `Sorry Moyna ${i} 😇`;
+        grid.appendChild(box);
+    }
+
+    let audio = null;
+    let songStarted = false;
+    let playAttempted = false;
+
+    // MP3 লিংক (2 মিনিট 5 সেকেন্ড = 125 সেকেন্ড থেকে শুরু)
+    const songURL = "https://github.com/Rs-RiisHaD/Song2/raw/refs/heads/main/Agar%20Tum%20Saath%20Ho%20%20Tamasha%20%20Alka%20Yagnik%20Arijit%20Singh%20%20Lyrics%20Song.mp3";
+    const startTime = 125; // 2 মিনিট 5 সেকেন্ড
+
+    function createAndPlaySong() {
+        if (audio) {
+            audio.pause();
+            audio = null;
+        }
+        
+        audio = new Audio(songURL);
+        audio.currentTime = startTime;
+        audio.loop = false;
+        
+        audio.play().then(() => {
+            songStarted = true;
+            document.getElementById('musicStatus').innerHTML = '🎵 গান বাজছে... "Agar Tum Saath Ho" 💔';
+            document.getElementById('musicStatus').style.background = "#ffe0e0";
+        }).catch(err => {
+            console.log("AutoPlay blocked. Need user interaction.");
+            document.getElementById('musicStatus').innerHTML = '⚠️ প্রথমে পেজের যেকোনো জায়গায় ক্লিক করুন, তারপর গান বাজবে ⚠️';
+        });
+        
+        audio.onended = function() {
+            document.getElementById('musicStatus').innerHTML = '🎵 গান শেষ — কিন্তু আমার Sorry শেষ নেই ❤️';
+        };
+    }
+
+    // স্ক্রল বা ক্লিক করলে গান চালু/চালু থাকবে
+    let userInteracted = false;
+
+    function enableSongOnInteraction() {
+        if (!userInteracted) {
+            userInteracted = true;
+            createAndPlaySong();
+        } else {
+            // যদি গান বন্ধ হয়ে যায়, আবার চালু করো
+            if (audio && audio.paused && !audio.ended) {
+                audio.play().catch(e => console.log(e));
+                document.getElementById('musicStatus').innerHTML = '🎵 গান আবার চালু হয়েছে 💕';
+            }
+        }
+    }
+
+    // পুরো পেজের যেকোনো জায়গায় ক্লিক
+    document.body.addEventListener('click', function(e) {
+        enableSongOnInteraction();
+    });
+
+    // স্ক্রল করলেও চালু হবে
+    let scrollTimeout;
+    function onScrollAction() {
+        if (userInteracted) {
+            if (audio && audio.paused && !audio.ended) {
+                audio.play().catch(e => console.log(e));
+            }
+        } else {
+            // এখনও ক্লিক করেনি, স্ক্রল দেখে ক্লিক করার কথা মনে করিয়ে দাও
+            document.getElementById('musicStatus').innerHTML = '💡 দয়া করে যে কোনো জায়গায় একবার ক্লিক করুন, তাহলে গান শুরু হবে 💡';
+        }
+    }
+    
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(onScrollAction, 150);
+    });
+    
+    const scrollDiv = document.getElementById('scrollArea');
+    scrollDiv.addEventListener('scroll', function() {
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(onScrollAction, 150);
+    });
+
+    // কার্ডেও ক্লিক ইভেন্ট
+    document.getElementById('mainCard').addEventListener('click', function(e) {
+        enableSongOnInteraction();
+    });
+</script>
+</body>
+</html>
